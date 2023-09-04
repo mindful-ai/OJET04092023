@@ -34,3 +34,26 @@ Shared and extra content can be found here
           document.getElementById("result").innerHTML = result;
 
         }
+------------------------------------------------------------------------------------
+var tablegen = function(val){
+        var parent = document.getElementById("table");
+        if(val != ''){
+          cleartable();
+          for(i = 1; i <= 10; i++){
+            var child = document.createElement("h3");
+            var text = document.createTextNode(val + ' X ' + i + ' = ' + val * i);
+            child.appendChild(text);
+            parent.appendChild(child);
+          }
+
+        }
+
+      }
+
+      var cleartable = function(){
+        var parent = document.getElementById("table");
+        while(parent.firstChild){
+          parent.removeChild(parent.lastChild);
+        }
+      }
+
