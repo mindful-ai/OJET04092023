@@ -56,4 +56,22 @@ var tablegen = function(val){
           parent.removeChild(parent.lastChild);
         }
       }
+--------------------------------------------------------------------------------------
+
+function App(){
+
+  let myclass = Math.random() > 0.5 ? "large" : "small";
+  let a = 100;
+  const clicked = () => {
+    a += 1;
+    console.log("Hi" + a);
+  }
+  return(
+    <div>
+        <h3 class={myclass}>Hello World, from JSX with a function! {43 + a}</h3>
+        <button onClick={clicked}>Click Me</button>
+    </div>
+  )
+}
+render(<App/>, document.body);
 
