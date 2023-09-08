@@ -35,3 +35,7 @@ module.exports = function (configObj) {
     archive.finalize();
   });
 };
+
+
+Issue the following command to build for release:
+ojet build web --release
