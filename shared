@@ -100,3 +100,29 @@ function App2(){
 }
 render(<App2 />, document.body);
 
+------------------------------------------------------------------------------------------
+
+
+import { useState } from 'preact/hooks';
+
+function App3(){
+
+  let myclass = Math.random() > 0.5 ? "large" : "small";
+  //let a = 100;
+
+  const [a, setA] = useState(100);
+  const clicked = () => {
+    //a += 1;
+    setA(a + 1);
+    console.log("Hi" + a);
+  }
+  return(
+    <div>
+        <h3 class={myclass}>Hello World, from JSX with a function! {43 + a}</h3>
+        <MyButton style={{ color:"red" }} onClick={clicked}><h5>Click</h5></MyButton>
+    </div>
+  )
+}
+
+render(<App3 />, document.body);
+
